@@ -1,0 +1,54 @@
+{
+    "products": [
+        {
+            "product": "water",
+            "price": 1,
+            "quantity": 1
+        },
+        {
+            "product": "bread",
+            "price": 5,
+            "quantity": 1
+        },
+        {
+            "product": "strawberry",
+            "price": 18,
+            "quantity": 1
+        },
+        {
+            "product": "beef",
+            "price": 27,
+            "quantity": 1
+        },
+        {
+            "product": "cucumber",
+            "price": 2,
+            "quantity": 1
+        },
+        {
+            "product": "apple",
+            "price": 2,
+            "quantity": 1
+        },
+        {
+            "product": "orange",
+            "price": 3,
+            "quantity": 1
+        },
+        {
+            "product": "chicken",
+            "price": 14,
+            "quantity": 1
+        },
+        {
+            "product": "milk",
+            "price": 6,
+            "quantity": 1
+        },
+        {
+            "product": "banana",
+            "price": 5,
+            "quantity": 1
+        }
+    ]
+}
