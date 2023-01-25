@@ -39,10 +39,22 @@ class Worker:
         customer_list = self.get_customer_list()
         for customer in customer_list:
             print(f'Cashier {cashier_id} handling customer: {customer.get_name()}\n\n')
-            customer_receipt = Receipt(shop=self.shop, client=customer)
-            customer_receipt.scan_items()
+            receipt = self.scan_items(customer)
             time.sleep(self.get_service_time())
-            customer_receipt.print_receipt()
+            receipt.print_receipt()
+            customer.set_receipt(receipt)
             print(f'Customer {customer.get_name()} has been served by Cashier {cashier_id}\n')
         return
 
+    def scan_items(self, customer):
+        receipt = Receipt(shop=self.shop, client=customer)
+        client_shopping_list = customer.get_shopping_list()
+        for product in client_shopping_list:
+            product_dict = {
+                "product": product,
+                "price": self.shop.get_price_by_product(product)
+            }
+
+            receipt.add_product_dict_to_receipt(product_dict)
+            receipt.add_to_total_cost(product_dict["price"])
+        return receipt

@@ -24,6 +24,19 @@ class Shop:
             if product_item["product"] == product_name:
                 return product_item["price"]
 
+    def set_quantity_by_product(self, product_name, quantity):
+        products_dict = self.products["products"]
+        for product_item in products_dict:
+            if product_item['product'] == product_name:
+                product_item['quantity'] = quantity
+                return product_item
+
+    def get_quantity_by_product(self, product_name):
+        products_dict = self.products["products"]
+        for product_item in products_dict:
+            if product_item['product'] == product_name:
+                return product_item['quantity']
+
 
 
 
