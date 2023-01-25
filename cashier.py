@@ -58,15 +58,3 @@ class Worker:
             receipt.add_product_dict_to_receipt(product_dict)
             receipt.add_to_total_cost(product_dict["price"])
         return receipt
-
-
-    # def customer_service(self, cashier_id):
-    #     customer_list = self.get_customer_list()
-    #     for customer in customer_list:
-    #         print(f'Cashier {cashier_id} handling customer: {customer.get_name()}\n\n')
-    #         customer_receipt = Receipt(shop=self.shop, client=customer)
-    #         customer_receipt.scan_items()
-    #         time.sleep(self.get_service_time())
-    #         customer_receipt.print_receipt()
-    #         print(f'Customer {customer.get_name()} has been served by Cashier {cashier_id}\n')
-    #     return

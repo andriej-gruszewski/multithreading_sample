@@ -1,4 +1,4 @@
-from cashier_v2 import Cashier
+from cashier import Cashier
 from shop import Shop
 from client import Client
 
