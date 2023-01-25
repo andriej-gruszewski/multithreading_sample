@@ -1,4 +1,4 @@
-from cashier import Cashier
+from cashier_v2 import Cashier
 from shop import Shop
 from client import Client
 
@@ -34,6 +34,16 @@ cashier2 = Cashier(2, 2, customer_list2, shop=shop)
 
 cashier1.start()
 cashier2.start()
+cashier1.join()
+cashier2.join()
+
+def print_customers_receipt(customer_list):
+    for customer in customer_list:
+        print(f"{customer.get_name()} \n")
+        customer.get_receipt().print_receipt()
+        print("\n\n")
 
 
 
+print_customers_receipt(customer_list1)
+print_customers_receipt(customer_list2)
