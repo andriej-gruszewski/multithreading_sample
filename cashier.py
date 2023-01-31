@@ -50,11 +50,5 @@ class Worker:
         receipt = Receipt(shop=self.shop, client=customer)
         client_shopping_list = customer.get_shopping_list()
         for product in client_shopping_list:
-            product_dict = {
-                "product": product,
-                "price": self.shop.get_price_by_product(product)
-            }
-
-            receipt.add_product_dict_to_receipt(product_dict)
-            receipt.add_to_total_cost(product_dict["price"])
+            receipt.add_product_dict_to_receipt(product)
         return receipt

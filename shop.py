@@ -37,7 +37,10 @@ class Shop:
             if product_item['product'] == product_name:
                 return product_item['quantity']
 
-
+    def print_current_stock(self):
+        print("Current Stock")
+        for product in self.get_products_list():
+            print(product + ": " + str(self.get_quantity_by_product(product)))
 
 
 class UnitTest(unittest.TestCase):
