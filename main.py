@@ -44,6 +44,7 @@ def print_customers_receipt(customer_list):
         print("\n\n")
 
 
-
 print_customers_receipt(customer_list1)
 print_customers_receipt(customer_list2)
+
+shop.print_current_stock()
